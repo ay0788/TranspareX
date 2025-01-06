@@ -1,1 +1,27 @@
-# TranspareX
+# **TranspareX: AI & Blockchain for Financial Transparency**
+
+## **Overview**
+TranspareX is a platform that uses AI and blockchain to enhance transparency, accountability, and efficiency in public sector financial management.
+
+## **Key Features**
+- User-friendly interface for seamless navigation.
+- Blockchain-secured, immutable transaction records.
+- AI-driven analytics for predictive insights and anomaly detection.
+- Real-time dashboard for monitoring financial data.
+- Smart contracts to automate fund disbursements.
+
+## **Technologies Used**
+- **Frontend**: React.js
+- **Backend**: Flask
+- **Blockchain**: Ethereum
+- **AI/ML**: Python
+- **Database**: SQL (Postgres/MySQL)
+
+## **Installation**
+### **Prerequisites**
+- Node.js
+- Python 3.x
+- Flask
+- SQL database setup (Postgres/MySQL)
+### Made by AYA SDOUR
+ Contact me : www.linkedin.com/in/aya-s-689519327
