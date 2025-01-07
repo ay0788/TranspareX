@@ -23,5 +23,8 @@ TranspareX is a platform that uses AI and blockchain to enhance transparency, ac
 - Python 3.x
 - Flask
 - SQL database setup (Postgres/MySQL)
+## **License**
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
 ### Made by AYA SDOUR
  Contact me : www.linkedin.com/in/aya-s-689519327
