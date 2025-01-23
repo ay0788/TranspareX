@@ -31,6 +31,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
  </br>
  Moavia Hassan: www.linkedin.com/in/moaviahassan
  </br>
- 
- ![Muhammad Ilyas:](https://www.linkedin.com/in/muhammad-ilyas-ibrahim/)
+ [Muhammad Ilyas:](https://www.linkedin.com/in/muhammad-ilyas-ibrahim/)
  
