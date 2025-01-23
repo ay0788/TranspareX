@@ -28,4 +28,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Made by :
  Aya SDOUR: www.linkedin.com/in/aya-s-689519327
+ Moavia Hassan: www.linkedin.com/in/moaviahassan
  
