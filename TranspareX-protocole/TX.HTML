@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TranspareX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to TranspareX!</h1>
+
+    <div id="events"></div>
+
+    <div class="form-container">
+      <h2>Release Funds</h2>
+      <form id="releaseFundsForm">
+        <label for="recipient">Recipient Address:</label>
+        <input type="text" id="recipient" required><br>
+        <label for="amount">Amount (ETH):</label>
+        <input type="text" id="amount" required><br>
+        <button type="submit">Release Funds</button>
+      </form>
+      <div id="releaseFundsResponse"></div>
+    </div>
+  </div>
+
+  <script>
+    async function fetchEvents() {
+      try {
+        const response = await fetch('http://127.0.0.1:5000/events');
+        const events = await response.json();
+
+        if (events.length === 0) {
+          document.getElementById('events').innerHTML = '<p>No events found</p>';
+        } else {
+          let eventHTML = '<ul>';
+          events.forEach(event => {
+            eventHTML += `
+              <li>
+                Transaction Hash: ${event.transactionHash} <br>
+                Recipient: ${event.recipient} <br>
+                Amount: ${event.amount} ETH
+              </li>
+            `;
+          });
+          eventHTML += '</ul>';
+          document.getElementById('events').innerHTML = eventHTML;
+        }
+      } catch (error) {
+        console.error('Error fetching events:', error);
+        document.getElementById('events').innerHTML = '<p>Error fetching events</p>';
+      }
+    }
+
+    document.getElementById('releaseFundsForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      
+      const recipient = document.getElementById('recipient').value;
+      const amount = document.getElementById('amount').value;
+
+      const response = await fetch('http://127.0.0.1:5000/release-funds', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          recipient: recipient,
+          amount: amount
+        })
+      });
+
+      const data = await response.json();
+      document.getElementById('releaseFundsResponse').innerText = data.message || data.error;
+    });
+
+    window.onload = fetchEvents;
+  </script>
+
+</body>
+</html>
