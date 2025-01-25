@@ -15,7 +15,7 @@ else:
     print("Unable to connect to Ganache")
 
 # Contract details
-contract_address = '0x9b64DE133BAb117b4F37cf7fE239BF5e4C062aeD'  # Replace with your deployed contract address
+contract_address = '0x9b64DE133BAb117b4F37cf7fE239BF5e4C062aeD'  
 abi = json.loads('''[
     {
         "anonymous": false,
@@ -36,7 +36,7 @@ abi = json.loads('''[
         "name": "FundReleased",
         "type": "event"
     }
-]''')  # Replace with your actual contract ABI if it's different
+]''') 
 
 # Initialize the contract
 contract = web3.eth.contract(address=contract_address, abi=abi)
