@@ -1,5 +1,7 @@
 # **TranspareX: AI & Blockchain for Financial Transparency**
 
+## Visual Overview
+![tx](https://raw.githubusercontent.com/ay0788/TranspareX/main/tx.jpg)
 
 ## **Overview**
 TranspareX is a platform that uses AI and blockchain to enhance transparency, accountability, and efficiency in public sector financial management.
@@ -10,31 +12,53 @@ TranspareX is a platform that uses AI and blockchain to enhance transparency, ac
 You can view the live prototype of **TranspareX** here:  
 👉 [TranspareX Prototype](https://htmlpreview.github.io/?https://raw.githubusercontent.com/ay0788/TranspareX/refs/heads/main/TranspareX-protocole/index.html)
 
-## **Key Features**
-- User-friendly interface for seamless navigation.
-- Blockchain-secured, immutable transaction records.
-- AI-driven analytics for predictive insights and anomaly detection.
-- Real-time dashboard for monitoring financial data.
-- Smart contracts to automate fund disbursements.
+---
 
+## **Key Features**
+- **User-Friendly Interface**: Intuitive design for seamless navigation.
+- **Blockchain-Secured Transactions**: Immutable records for enhanced security.
+- **AI-Driven Analytics**: Insights for anomaly detection and trend forecasting.
+- **Real-Time Monitoring**: Dashboards to track financial data at a glance.
+- **Smart Contracts**: Automates fund disbursements for efficiency.
+
+---
 
 ## **Technologies Used**
-- **Frontend**: React.js
-- **Backend**: Flask
-- **Blockchain**: Ethereum
-- **AI/ML**: Python
-- **Database**: SQL (Postgres/MySQL)
+- **Frontend**: HTML/CSS/JavaScript (for the prototype)  
+- **Backend**: Flask (Python-based web framework)  
+- **Blockchain**: Ethereum (via Ganache for local testing)  
+- **AI/ML**: Python (for predictive analysis and anomaly detection)  
+- **Database**: SQL (Postgres/MySQL for reliable data storage)  
+
+---
 
 ## **Installation**
+
 ### **Prerequisites**
-- Node.js
-- Python 3.x
-- Flask
+- Python 3.x  
+- Flask  
+- Ganache (for blockchain testing)  
 - SQL database setup (Postgres/MySQL)
+
+---
+
+### **Steps**
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/ay0788/TranspareX.git
+
+---
+## **Future Enhancements**
+  -**Interactive Charts**: Add advanced data visualizations for financial analytics.
+  -**Deployment on Mainnet**: Transition from local blockchain (Ganache) to Ethereum testnet/mainnet.
+  -**Fraud Detection**: Implement advanced machine learning models for anomaly detection.
+  -**Role-Based Access**: Differentiate access levels for stakeholders.
+
+
 ## **License**
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-### Made by :
+### **Made by** 
  Aya SDOUR: www.linkedin.com/in/aya-s-689519327
  </br>
  Moavia Hassan: www.linkedin.com/in/moaviahassan
