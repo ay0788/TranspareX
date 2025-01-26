@@ -41,15 +41,18 @@ You can view the live prototype of **TranspareX** here:
 ---
 
 ### **Steps**
-1. **Clone the Repository**:
+**Clone the Repository**:
    ```bash
    git clone https://github.com/ay0788/TranspareX.git
 
 ---
 ## **Future Enhancements**
   -**Interactive Charts**: Add advanced data visualizations for financial analytics.
+
   -**Deployment on Mainnet**: Transition from local blockchain (Ganache) to Ethereum testnet/mainnet.
+
   -**Fraud Detection**: Implement advanced machine learning models for anomaly detection.
+
   -**Role-Based Access**: Differentiate access levels for stakeholders.
 
 
