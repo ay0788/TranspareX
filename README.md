@@ -1,6 +1,4 @@
 # **TranspareX: AI & Blockchain for Financial Transparency**
-
-## Visual Overview
 ![tx](https://raw.githubusercontent.com/ay0788/TranspareX/main/tx.jpg)
 
 ## **Overview**
