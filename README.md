@@ -1,7 +1,12 @@
 # **TranspareX: AI & Blockchain for Financial Transparency**
 
+
 ## **Overview**
 TranspareX is a platform that uses AI and blockchain to enhance transparency, accountability, and efficiency in public sector financial management.
+
+## **Live Prototype**
+You can view the live prototype of **TranspareX** here:  
+👉 [TranspareX Prototype](https://htmlpreview.github.io/?https://raw.githubusercontent.com/ay0788/TranspareX/refs/heads/main/TranspareX-protocole/index.html)
 
 ## **Key Features**
 - User-friendly interface for seamless navigation.
