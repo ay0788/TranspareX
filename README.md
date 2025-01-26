@@ -4,7 +4,7 @@
 ## **Overview**
 TranspareX is a platform that uses AI and blockchain to enhance transparency, accountability, and efficiency in public sector financial management.
 
-![TranspareX in Action](https://raw.githubusercontent.com/ay0788/TranspareX/main/path-to-your-gif.gif)
+
 
 ## **Live Prototype**
 You can view the live prototype of **TranspareX** here:  
@@ -16,6 +16,18 @@ You can view the live prototype of **TranspareX** here:
 - AI-driven analytics for predictive insights and anomaly detection.
 - Real-time dashboard for monitoring financial data.
 - Smart contracts to automate fund disbursements.
+
+## Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ay0788/TranspareX.git
+2.Install dependencies for frontend and backend:
+   cd frontend && npm install
+   cd ../backend && pip install -r requirements.txt
+3.Start the backend server:
+   python app.py
+4.Start the frontend:
+  npm start
 
 ## **Technologies Used**
 - **Frontend**: React.js
