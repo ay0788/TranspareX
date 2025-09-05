@@ -1,0 +1,10 @@
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.5
+Flask-CORS==4.0.0
+Werkzeug==2.3.7
+web3==6.11.3
+PyJWT==2.8.0
+python-dotenv==1.0.0
+requests==2.31.0
+psycopg2-binary==2.9.7
+cryptography==41.0.4

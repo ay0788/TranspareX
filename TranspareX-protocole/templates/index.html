@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranspareX - AI & Blockchain for Financial Transparency</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1><i class="fas fa-shield-alt"></i> TranspareX</h1>
+            </div>
+            <div class="nav-menu">
+                <button id="loginBtn" class="nav-btn">Login</button>
+                <button id="registerBtn" class="nav-btn">Register</button>
+                <button id="logoutBtn" class="nav-btn" style="display: none;">Logout</button>
+                <button id="testDashboardBtn" class="nav-btn" style="display: none;">Test Dashboard</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section id="welcomeSection" class="welcome-section">
+                <div class="hero">
+                    <h2>Revolutionizing Fund Management with AI and Blockchain</h2>
+                    <p>Transparent, secure, and efficient financial management for public sector organizations</p>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-coins"></i>
+                            <h3 id="totalFunds">0</h3>
+                            <p>Total Funds</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-exchange-alt"></i>
+                            <h3 id="totalTransactions">0</h3>
+                            <p>Transactions</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3 id="completedTransactions">0</h3>
+                            <p>Completed</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-wallet"></i>
+                            <h3 id="blockchainBalance">0</h3>
+                            <p>Blockchain Balance</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Section -->
+            <section id="dashboardSection" class="dashboard-section" style="display: none;">
+                <div class="dashboard-header">
+                    <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+                    <div class="user-info">
+                        <span id="userInfo"></span>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Funds Management -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-piggy-bank"></i> Funds Management</h3>
+                        <div class="card-content">
+                            <button id="createFundBtn" class="btn btn-primary">Create Fund</button>
+                            <div id="fundsList" class="funds-list"></div>
+                        </div>
+                    </div>
+
+                    <!-- Transaction Management -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-exchange-alt"></i> Transactions</h3>
+                        <div class="card-content">
+                            <button id="createTransactionBtn" class="btn btn-primary">Create Transaction</button>
+                            <div id="transactionsList" class="transactions-list"></div>
+                        </div>
+                    </div>
+
+                    <!-- Blockchain Events -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-link"></i> Blockchain Events</h3>
+                        <div class="card-content">
+                            <div id="blockchainEvents" class="blockchain-events"></div>
+                        </div>
+                    </div>
+
+                    <!-- Real-time Updates -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-sync-alt"></i> Real-time Updates</h3>
+                        <div class="card-content">
+                            <div id="realtimeUpdates" class="realtime-updates"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modals -->
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email:</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <div id="loginMessage" class="message"></div>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerUsername">Username:</label>
+                        <input type="text" id="registerUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email:</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password:</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+                <div id="registerMessage" class="message"></div>
+            </div>
+        </div>
+
+        <!-- Create Fund Modal -->
+        <div id="createFundModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Create Fund</h2>
+                <form id="createFundForm">
+                    <div class="form-group">
+                        <label for="fundName">Fund Name:</label>
+                        <input type="text" id="fundName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fundDescription">Description:</label>
+                        <textarea id="fundDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="fundAmount">Total Amount:</label>
+                        <input type="number" id="fundAmount" step="0.01" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Fund</button>
+                </form>
+                <div id="createFundMessage" class="message"></div>
+            </div>
+        </div>
+
+        <!-- Create Transaction Modal -->
+        <div id="createTransactionModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Create Transaction</h2>
+                <form id="createTransactionForm">
+                    <div class="form-group">
+                        <label for="transactionFund">Fund:</label>
+                        <select id="transactionFund" required>
+                            <option value="">Select a fund</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipientAddress">Recipient Address:</label>
+                        <input type="text" id="recipientAddress" placeholder="0x..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="transactionAmount">Amount:</label>
+                        <input type="number" id="transactionAmount" step="0.01" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Transaction</button>
+                </form>
+                <div id="createTransactionMessage" class="message"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
